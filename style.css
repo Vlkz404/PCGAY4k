@@ -1,0 +1,340 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #0c0c0c 0%, #1a1a2e 50%, #16213e 100%);
+    color: #ffffff;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.title {
+    font-size: 2.5rem;
+    background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 15px;
+    text-shadow: 0 0 30px rgba(78, 205, 196, 0.3);
+}
+
+.total-price {
+    font-size: 1.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px 30px;
+    border-radius: 50px;
+    display: inline-block;
+    border: 2px solid #4ecdc4;
+}
+
+.price-tag {
+    color: #4ecdc4;
+    font-weight: bold;
+}
+
+.price-value {
+    color: #ffd700;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.section {
+    margin-bottom: 50px;
+    background: rgba(255, 255, 255, 0.03);
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.section-title {
+    font-size: 1.8rem;
+    color: #4ecdc4;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #4ecdc4;
+    display: inline-block;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 25px;
+}
+
+.product-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    padding: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.product-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    transition: left 0.5s ease;
+}
+
+.product-card:hover::before {
+    left: 100%;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    border-color: #4ecdc4;
+}
+
+.product-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.product-icon {
+    font-size: 1.5rem;
+    margin-right: 15px;
+    color: #4ecdc4;
+}
+
+.product-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.product-price {
+    background: linear-gradient(45deg, #ff6b6b, #ffa500);
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.product-description {
+    color: #cccccc;
+    margin-bottom: 15px;
+    font-size: 0.95rem;
+}
+
+.product-link {
+    display: inline-flex;
+    align-items: center;
+    background: #4ecdc4;
+    color: #000;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+}
+
+.product-link:hover {
+    background: #45b7d1;
+    transform: scale(1.05);
+}
+
+.product-link i {
+    margin-right: 8px;
+}
+
+.highlights {
+    text-align: center;
+}
+
+.highlights-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.highlight-card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 30px 20px;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.highlight-card:hover {
+    transform: translateY(-5px);
+    border-color: #4ecdc4;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.highlight-card i {
+    font-size: 2.5rem;
+    color: #4ecdc4;
+    margin-bottom: 15px;
+}
+
+.highlight-card h3 {
+    color: #ffffff;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.highlight-card p {
+    color: #cccccc;
+    font-size: 0.9rem;
+}
+
+.footer {
+    margin-top: 50px;
+    text-align: center;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.final-considerations h3 {
+    color: #4ecdc4;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+.final-considerations p {
+    color: #cccccc;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.final-quote {
+    font-style: italic;
+    color: #ffd700 !important;
+    font-size: 1.3rem !important;
+    margin-top: 20px;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    animation: fadeIn 0.3s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.modal-content {
+    display: block;
+    margin: 5% auto;
+    max-width: 80%;
+    max-height: 80%;
+    border-radius: 10px;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.close:hover {
+    color: #4ecdc4;
+}
+
+#modalCaption {
+    text-align: center;
+    color: #fff;
+    padding: 10px;
+    font-size: 1.1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+    
+    .title {
+        font-size: 2rem;
+    }
+    
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .product-card {
+        padding: 20px;
+    }
+    
+    .section {
+        padding: 20px;
+    }
+    
+    .highlights-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .modal-content {
+        max-width: 95%;
+        max-height: 95%;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 1.5rem;
+    }
+    
+    .total-price {
+        font-size: 1.2rem;
+        padding: 10px 20px;
+    }
+    
+    .section-title {
+        font-size: 1.4rem;
+    }
+    
+    .product-name {
+        font-size: 1.1rem;
+    }
+}
