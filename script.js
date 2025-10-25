@@ -102,7 +102,7 @@ const products = {
             name: "Lian-Li UNI HUB SL-INFINITY",
             price: "± R$ 300",
             description: "Controladora RGB L-Connect 3",
-            link: "https://pt.aliexpress.com/item/1005007927907008.html",
+            link: "https://pt.aliexpress.com/item/1005004600649607.html",
             icon: "fas fa-sliders-h"
         },
         {
